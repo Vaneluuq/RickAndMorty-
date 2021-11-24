@@ -7,6 +7,9 @@ font-family: 'Shadows Into Light', cursive;
 font-family: 'Shadows Into Light Two', cursive; */
 
 .container {
+    width: 100%;
+    height: 100vh;
+    overflow: scroll;
     background: #16A085;  /* fallback for old browsers */
     background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
     background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
@@ -23,6 +26,7 @@ header{
     flex-wrap:wrap;
     justify-content: space-evenly;
     margin-top: 1.5em;
+    font-family: 'Roboto', sans-serif;;
 }
 
 
@@ -31,7 +35,7 @@ header{
     width: 13em;
     padding: 0.5em;
     background-color: #1B262C;
-    height: 22.5em;
+    height: 21em;
     transition:ease all 0.5s;
     border: #1B262C solid;
     border-radius: 10px;
