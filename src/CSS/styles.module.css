@@ -1,7 +1,28 @@
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@200;400;600&family=Roboto:wght@100;300;400;500&family=Shadows+Into+Light&family=Shadows+Into+Light+Two&display=swap');
+
+/* 
+font-family: 'Oswald', sans-serif;
+font-family: 'Roboto', sans-serif;
+font-family: 'Shadows Into Light', cursive;
+font-family: 'Shadows Into Light Two', cursive; */
+
+.container {
+    background: #16A085;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #F4D03F, #16A085);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #F4D03F, #16A085); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+header{
+    display: flex;
+    justify-content: center;
+}
+
 .containerCards{
     display:flex;
     flex-wrap:wrap;
     justify-content: space-evenly;
+    margin-top: 1.5em;
 }
 
 
@@ -41,4 +62,30 @@
 .containerText h2{
     margin: 0.3em;
     color: #A8FF3E;
+}
+
+.containerFilter{
+    text-align: center;
+}
+
+.containerFilter label{
+    margin-right: 0.5em;
+    font-family: 'Shadows Into Light Two', cursive;
+    font-weight: bolder;
+    font-size: 1.2em;
+}
+
+.containerFilter input{
+    outline: none;
+    border: #1B262C solid 0.15em;
+    height: 1.2em;
+    font-family: 'Shadows Into Light Two', cursive;
+}
+
+.containerFilter input:focus {
+    border: #A8FF3E solid;
+}
+
+.containerFilter select {
+    font-family: 'Shadows Into Light Two', cursive;
 }

@@ -2,6 +2,7 @@ import React from 'react';
 import FilterByName from '../components/FilterByName';
 import FilterBySpecies from '../components/FilterBySpecies';
 import FilterByDead from '../components/FilterByDead';
+import styles from '../CSS/styles.module.css';
 
 
 const FilterSection = (props) => {
@@ -9,7 +10,7 @@ const FilterSection = (props) => {
   const handleForm = (e) => e.preventDefault();
 
   return (
-    <section>
+    <section className= {styles.containerFilter}>
       <form className='form' onSubmit={handleForm}>
         <FilterByName
           handleFilter={props.handleFilter}

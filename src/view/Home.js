@@ -1,13 +1,12 @@
 import React, {useState, useEffect} from 'react';
 import axios from 'axios';
-import CardCharacter from '../components/CardCharacter'
+import CardCharacter from '../components/CardCharacter';
 import FilterSection from '../components/FilterSection';
-import imgRick from '../assets/rick.png'
-import styles from '../CSS/styles.module.css'
+import styles from '../CSS/styles.module.css';
+import Header from '../components/Header';
 
 
 const Home = () => {
-    const [filterCharacter, setFilterCharacter] = useState("");
     const [characters, setCharacters] = useState([]);
     const [nameFilter, setNameFilter] = useState('');
     const [speciesFilter, setSpeciesFilter] = useState('all');
@@ -23,11 +22,6 @@ const Home = () => {
            })
   }, []);
   
-
-
-    const charactersFilter = characters.filter((character) =>
-		character.name.toLocaleLowerCase().includes(filterCharacter.toLocaleLowerCase())
-	)
 
     const handleFilter = (data) => {
         if (data.key === 'name') {
@@ -59,8 +53,8 @@ const Home = () => {
 
 
     return ( 
-        <>
-            <img src= {imgRick}></img>
+        <div className={styles.container}>
+            <Header/>
             <FilterSection
                 handleFilter={handleFilter}
                 nameFilter={nameFilter}
@@ -70,7 +64,7 @@ const Home = () => {
 
             <section className= {styles.containerCards}>
             {
-                charactersFilter.length > 0 ? (
+                renderFilteredCharacters.length > 0 ? (
                     renderFilteredCharacters.map((character) => (
                          <div className = {styles.containerCard}>
                             <CardCharacter key={character.id} character= {character}/>
@@ -78,15 +72,14 @@ const Home = () => {
                     ))
                 ):(
                     <p>
-						No se encontro personajes con la busqueda{' '}
-						<strong>"{filterCharacter}"</strong>.
+						No se encuentra ningun personaje llamado <strong>"{nameFilter}"</strong> en este universo.
 					</p>
 
                 )
             }
 
             </section>    
-        </>
+        </div>
 
      );
 }

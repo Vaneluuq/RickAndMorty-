@@ -12,7 +12,7 @@ const FilterByName = (props) => {
   return (
     <>
       <label className='form__label--name' htmlFor='name'>
-        "Welcome to the club!"
+        Buscas a alguien en particular?
       </label>
       <input
         className='form__input'
@@ -20,7 +20,7 @@ const FilterByName = (props) => {
         name='name'
         id='name'
         value={props.nameFilter}
-        placeholder='Search some pals...'
+        placeholder='Ej. Morty Smith'
         onChange={handleChange}
       />
     </>
