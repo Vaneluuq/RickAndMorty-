@@ -5,7 +5,7 @@ Además se le permite realizar la busqueda de un personaje por el nombre, estado
 
 ## Deploy
 
-La aplicación fue desplegada mediente Github Pages en: [Rick and Morty APP](vaneluuq.github.io/rickandmorty-/)
+La aplicación fue desplegada mediente Github Pages en: [Rick and Morty APP](https://vaneluuq.github.io/RickAndMorty-/)
 
 
 
